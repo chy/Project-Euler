@@ -1,0 +1,15 @@
+#Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.
+
+#function to find the sum of squares... I spose I could use a lambda function for this
+
+def sumofsquares(hapless): #where hapless is a list of numbers
+	return sum([x^2 for x in hapless])
+	
+#function to find the square of the sum	
+	
+def squareofsum(hapless): #where, again, hapless is a list of numbers
+	return sum(hapless)**2
+
+list1 = range(1,101)
+
+sumofsquares(list1) - squareofsum(list1)

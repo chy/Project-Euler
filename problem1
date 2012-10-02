@@ -1,0 +1,41 @@
+# If we list all the natural numbers below 10 that are multiples  
+# of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 
+# 23. Find the sum of all the multiples of 3 or 5 below 1000.
+
+intlist = range(1, 1000)
+divthree = []
+divfive = []
+divfifteen = []
+
+for number in intlist:
+	if number % 3 == 0:
+		divthree.append(number)
+	if number % 5 == 0:
+		divfive.append(number)
+	if number % 15 == 0:
+		divfifteen.append(number)
+
+def addlists(list1, list2):
+	n = 0
+	for number in list1:
+		n += number
+	for number in list2:
+		n += number
+	print n
+
+def addintsinlist(list1):
+	n = 0
+	for number in list1:
+		n+= number
+	print(n)
+
+addlists(divthree, divfive)
+addintsinlist(divfifteen)
+
+answer = addlists(divfive, divthree) - addintsinlist(divfifteen)
+
+#YAY! the answer is 233168. That only took me 15 tries... because I MISINTERPRETED THE QUESTION ARGH... all the numbers BELOW NOT INCLUDING 1000, idiot...
+#And NOW I realize that python has a handy built-in function called sum() that lets you solve this problem in one line.
+#that line being sum([x for x in range(1000) if x%5 == 0 or x%3 ==0)]
+#I need to familiarize myself with python's nifty built-in functions
+

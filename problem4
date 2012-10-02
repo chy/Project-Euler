@@ -1,0 +1,8 @@
+# Find the largest palindrome made from the product of two 3-digit numbers.
+
+sooo one way to do this would be to generate a list of the products of the three digit numbers, sort it greatest to least, and loop through it for palindromes.... but that's not at all clever and would take forever and be resource-intensive
+
+another way would be to check each product as it's generated... I'd want to generate them in a greatest-to-least fashion
+
+
+

@@ -1,0 +1,61 @@
+#The prime factors of 13195 are 5, 7, 13 and 29.
+#What is the largest prime factor of the number 600851475143 ?
+
+
+def isprime(integer):
+	import math	
+	isprime = True
+	oddints = []
+	if integer % 2 == 0:
+		isprime = False
+	for x in range(2, math.sqrt(integer)+1):
+		if integer % 2 != 0:
+			oddints.append(x)
+	oddints.sort()
+	for x in oddints:
+		if int % x == 0:
+			isprime = False
+			break
+	return isprime
+
+
+
+
+
+
+and integer % x == 0:
+			isprime = False			
+			break
+	return isprime
+
+
+
+
+
+
+def greatestprimefactor(integer):
+	import math
+	intlist = range(2, int(math.sqrt(integer)+1))
+	intlist.reverse()
+	factors = []
+	gpf = 1
+	if isprime(integer) == True:
+		gpf = integer	
+	else:
+		for x in intlist:
+			if integer % x == 0:
+				factors.append(x)
+	factors.sort()
+	factors.reverse()
+	for x in factors:
+		if isprime(x) == True:
+			gpf = x
+			break
+	return gpf
+
+integer = 600851475143
+
+greatestprimefactor(600851475143)
+
+		
+

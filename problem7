@@ -1,0 +1,22 @@
+#What is the 10001st prime number?
+
+def isprime(integer):
+	import math	
+	isprime = True
+	if integer == 1 or integer == 2:
+		return True
+	if integer > 2 and integer % 2 == 0:
+		isprime = False		
+		return isprime
+	oddints = [x for x in range(2, int(math.sqrt(integer))+1) if x%2 != 0]
+	oddints.sort()
+	for x in oddints:
+		if integer % x == 0:
+			isprime = False
+			return isprime
+	return isprime 
+
+def nthprime(n):
+
+
+

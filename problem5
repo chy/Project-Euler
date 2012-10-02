@@ -1,0 +1,72 @@
+#What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
+
+def leastcommonmultiple(n): #where n is a list of numbers
+	k = 0
+	while True:
+		for x in n:
+			if k
+
+
+>>> top = 2432902008176640000
+>>> top
+2432902008176640000L
+>>> list1 = range(1,21)
+>>> list1
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+>>> counter = 0
+>>> answer = 0
+>>> 
+>>> while counter < 20:
+...     for x in list1:
+...             if top/x != 0:
+...                     counter = 0
+...                     answer = 0
+...             else if top/x == 0:
+  File "<stdin>", line 6
+    else if top/x == 0:
+          ^
+SyntaxError: invalid syntax
+>>> while counter < 20:
+...     for x in list1:
+...             if top % x != 0:
+...                     counter = 0
+...                     answer = 0
+...             else:
+...                     counter += 1
+...                     answer = x
+... 
+
+yeah that was a bad approach
+a REALLY FRIGGIN SLOW approach
+
+hm so...  maybe start from teh bottom 
+
+def productoflist(list1):
+	product = 1
+	for x in list1:
+		product *= x
+	return product
+
+
+
+def leastcommonmultiple(list1):
+	list1.sort()	
+	p = 1
+	top = productoflist(list1)
+	counter = 0
+	answer = 0
+	while counter <= len(list1) and p < top:
+		for x in list1:
+			if p % x != 0:
+				counter = 0
+				answer = 0
+			else:
+				counter += 1
+				answer = x
+	return answer
+
+
+
+
+
+

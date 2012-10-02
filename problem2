@@ -1,0 +1,17 @@
+#Sum the even terms of the fibonacci series whose values do not exceed 4m
+
+def fib(n):
+	if n == 0 or n == 1:
+		return 1
+	else:
+		return fib(n-1) + fib(n-2)
+
+fibs = []
+n = 0
+while fib(n) <= 4000000:
+	fibs.append(fib(n))
+	n+= 1
+
+sum([x for x in fibs if x%2 == 0]) 
+
+
